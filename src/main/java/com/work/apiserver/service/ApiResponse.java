@@ -1,6 +1,7 @@
-package com.work.apiserver.model;
+package com.work.apiserver.service;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.work.apiserver.model.PublicData;
 import lombok.Data;
 
 import java.util.List;

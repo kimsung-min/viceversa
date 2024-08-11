@@ -32,8 +32,6 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-
-	// 추가된 Jackson XML 의존성
 	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.3'
 }
 

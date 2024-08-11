@@ -1,7 +1,6 @@
 package com.work.apiserver.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.work.apiserver.model.ApiResponse;
 import com.work.apiserver.model.PublicData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -15,7 +15,7 @@ public class PublicData {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String galContentId;
-    private String galContentTypeId; // 추가된 필드
+    private String galContentTypeId;
     private String galTitle;
     private String galWebImageUrl;
     private String galCreatedtime;
