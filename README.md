@@ -14,3 +14,35 @@
     - 수집된 데이터를 PublicDataService를 통해 데이터베이스에 저장합니다.
     - 저장된 데이터를 PublicDataController에서 제공하는 검색 API를 통해 검색할 수 있습니다.
 
+4. 구동방법
+    - Clone the repository
+  
+5. 데이터베이스 설정
+   - spring.datasource.url=jdbc:mysql://localhost:3306/ksm
+   - spring.datasource.username=ksm
+   - spring.datasource.password=1q2w3e4R!
+   - spring.jpa.hibernate.ddl-auto=update
+   - spring.jpa.show-sql=true
+  
+6. 빌드
+   
+   dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.3'
+}
+
+7. 환경
+    - tool : intellij
+    - Gradle
+    - java version 17
+    - spring boot version 3.3.2
+
+
+
