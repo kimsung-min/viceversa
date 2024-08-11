@@ -1,27 +1,30 @@
-package com.work.apiserver.service;
+package com.work.apiserver.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.work.apiserver.model.PublicData;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ApiResponse {
     private Response response;
 
     @Data
+    @JsonIgnoreProperties(ignoreUnknown = true)
     public static class Response {
         private Header header;
         private Body body;
 
         @Data
+        @JsonIgnoreProperties(ignoreUnknown = true)
         public static class Header {
             private String resultCode;
             private String resultMsg;
         }
 
         @Data
+        @JsonIgnoreProperties(ignoreUnknown = true)
         public static class Body {
             private Items items;
             private int numOfRows;
@@ -29,9 +32,9 @@ public class ApiResponse {
             private int totalCount;
 
             @Data
+            @JsonIgnoreProperties(ignoreUnknown = true)
             public static class Items {
-                @JsonProperty("item")
-                private List<PublicData> itemList;
+                private List<PublicData> item;
             }
         }
     }

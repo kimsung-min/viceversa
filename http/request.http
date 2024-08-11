@@ -1,7 +1,10 @@
-### 공공데이터 포털 API에서 데이터 가져오기
+### 공공데이터 데이터 목록
 GET https://api.visitkorea.or.kr/openapi/service/rest/PhotoGalleryService/galleryList?serviceKey=YOUR_API_KEY&numOfRows=50&pageNo=1&MobileOS=ETC&MobileApp=AppTest&_type=json
 
-### 데이터베이스에 데이터 저장하기
+### 데이터 수집 및 저장
+GET http://localhost:8080/collect/api/collect-and-save
+
+### 단일 데이터 저장하기
 POST http://localhost:8080/api/data/save
 Content-Type: application/json
 
@@ -15,7 +18,13 @@ Content-Type: application/json
     "galModifiedtime": "20240709171727",
     "galPhotographyMonth": "201004",
     "galPhotographyLocation": "서울 경복궁",
-    "galPhotographer": "한국관광공사 김지호",
-    "galSearchKeyword": "청설모, 동물"
+    "galPhotographer": "한국관광공사 김성민",
+    "galSearchKeyword": "낙타, 동물"
   }
 ]
+
+### 제목 검색
+GET http://localhost:8080/api/data/search?title=청설모
+
+### 사진 작가 검색
+GET http://localhost:8080/api/data/search?photographer=김지호

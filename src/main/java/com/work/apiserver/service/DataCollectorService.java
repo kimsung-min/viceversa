@@ -14,14 +14,14 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import java.util.List;
 
 @Service
-public class DataCollector {
+public class DataCollectorService {
 
     @Autowired
     private PublicDataService publicDataService;
 
     private RestTemplate restTemplate;
 
-    public DataCollector() {
+    public DataCollectorService() {
         this.restTemplate = new RestTemplate();
         this.restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
         this.restTemplate.getMessageConverters().add(new MappingJackson2XmlHttpMessageConverter());
