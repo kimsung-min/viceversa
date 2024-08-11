@@ -15,7 +15,7 @@
     - 저장된 데이터를 PublicDataController에서 제공하는 검색 API를 통해 검색할 수 있습니다.
 
 4. 구동방법
-    - Clone the repository
+    - Clone the repository (https://github.com/kimsung-min/viceversa.git)
   
 5. 데이터베이스 설정
    - spring.datasource.url=jdbc:mysql://localhost:3306/ksm
